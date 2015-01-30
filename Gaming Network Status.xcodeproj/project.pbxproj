@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2B0F6931A7B3A04006E80ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B0F6921A7B3A04006E80ED /* AppDelegate.swift */; };
+		B2B0F6951A7B3A04006E80ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2B0F6941A7B3A04006E80ED /* Images.xcassets */; };
+		B2B0F6981A7B3A04006E80ED /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2B0F6961A7B3A04006E80ED /* MainMenu.xib */; };
+		B2B0F6A41A7B3A04006E80ED /* Gaming_Network_StatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B0F6A31A7B3A04006E80ED /* Gaming_Network_StatusTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2B0F69E1A7B3A04006E80ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2B0F6851A7B3A04006E80ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2B0F68C1A7B3A04006E80ED;
+			remoteInfo = "Gaming Network Status";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B2B0F68D1A7B3A04006E80ED /* Gaming Network Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gaming Network Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2B0F6911A7B3A04006E80ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2B0F6921A7B3A04006E80ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B2B0F6941A7B3A04006E80ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B2B0F6971A7B3A04006E80ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B2B0F69D1A7B3A04006E80ED /* Gaming Network StatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gaming Network StatusTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2B0F6A21A7B3A04006E80ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2B0F6A31A7B3A04006E80ED /* Gaming_Network_StatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gaming_Network_StatusTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2B0F68A1A7B3A04006E80ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2B0F69A1A7B3A04006E80ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2B0F6841A7B3A04006E80ED = {
+			isa = PBXGroup;
+			children = (
+				B2B0F68F1A7B3A04006E80ED /* Gaming Network Status */,
+				B2B0F6A01A7B3A04006E80ED /* Gaming Network StatusTests */,
+				B2B0F68E1A7B3A04006E80ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2B0F68E1A7B3A04006E80ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2B0F68D1A7B3A04006E80ED /* Gaming Network Status.app */,
+				B2B0F69D1A7B3A04006E80ED /* Gaming Network StatusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2B0F68F1A7B3A04006E80ED /* Gaming Network Status */ = {
+			isa = PBXGroup;
+			children = (
+				B2B0F6921A7B3A04006E80ED /* AppDelegate.swift */,
+				B2B0F6941A7B3A04006E80ED /* Images.xcassets */,
+				B2B0F6961A7B3A04006E80ED /* MainMenu.xib */,
+				B2B0F6901A7B3A04006E80ED /* Supporting Files */,
+			);
+			path = "Gaming Network Status";
+			sourceTree = "<group>";
+		};
+		B2B0F6901A7B3A04006E80ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2B0F6911A7B3A04006E80ED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2B0F6A01A7B3A04006E80ED /* Gaming Network StatusTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2B0F6A31A7B3A04006E80ED /* Gaming_Network_StatusTests.swift */,
+				B2B0F6A11A7B3A04006E80ED /* Supporting Files */,
+			);
+			path = "Gaming Network StatusTests";
+			sourceTree = "<group>";
+		};
+		B2B0F6A11A7B3A04006E80ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2B0F6A21A7B3A04006E80ED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2B0F68C1A7B3A04006E80ED /* Gaming Network Status */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2B0F6A71A7B3A04006E80ED /* Build configuration list for PBXNativeTarget "Gaming Network Status" */;
+			buildPhases = (
+				B2B0F6891A7B3A04006E80ED /* Sources */,
+				B2B0F68A1A7B3A04006E80ED /* Frameworks */,
+				B2B0F68B1A7B3A04006E80ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gaming Network Status";
+			productName = "Gaming Network Status";
+			productReference = B2B0F68D1A7B3A04006E80ED /* Gaming Network Status.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2B0F69C1A7B3A04006E80ED /* Gaming Network StatusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2B0F6AA1A7B3A04006E80ED /* Build configuration list for PBXNativeTarget "Gaming Network StatusTests" */;
+			buildPhases = (
+				B2B0F6991A7B3A04006E80ED /* Sources */,
+				B2B0F69A1A7B3A04006E80ED /* Frameworks */,
+				B2B0F69B1A7B3A04006E80ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2B0F69F1A7B3A04006E80ED /* PBXTargetDependency */,
+			);
+			name = "Gaming Network StatusTests";
+			productName = "Gaming Network StatusTests";
+			productReference = B2B0F69D1A7B3A04006E80ED /* Gaming Network StatusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2B0F6851A7B3A04006E80ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Erik Santana";
+				TargetAttributes = {
+					B2B0F68C1A7B3A04006E80ED = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					B2B0F69C1A7B3A04006E80ED = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = B2B0F68C1A7B3A04006E80ED;
+					};
+				};
+			};
+			buildConfigurationList = B2B0F6881A7B3A04006E80ED /* Build configuration list for PBXProject "Gaming Network Status" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2B0F6841A7B3A04006E80ED;
+			productRefGroup = B2B0F68E1A7B3A04006E80ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2B0F68C1A7B3A04006E80ED /* Gaming Network Status */,
+				B2B0F69C1A7B3A04006E80ED /* Gaming Network StatusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2B0F68B1A7B3A04006E80ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2B0F6951A7B3A04006E80ED /* Images.xcassets in Resources */,
+				B2B0F6981A7B3A04006E80ED /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2B0F69B1A7B3A04006E80ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2B0F6891A7B3A04006E80ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2B0F6931A7B3A04006E80ED /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2B0F6991A7B3A04006E80ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2B0F6A41A7B3A04006E80ED /* Gaming_Network_StatusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2B0F69F1A7B3A04006E80ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2B0F68C1A7B3A04006E80ED /* Gaming Network Status */;
+			targetProxy = B2B0F69E1A7B3A04006E80ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B2B0F6961A7B3A04006E80ED /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2B0F6971A7B3A04006E80ED /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2B0F6A51A7B3A04006E80ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B2B0F6A61A7B3A04006E80ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B2B0F6A81A7B3A04006E80ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Gaming Network Status/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B2B0F6A91A7B3A04006E80ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Gaming Network Status/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B2B0F6AB1A7B3A04006E80ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Gaming Network StatusTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gaming Network Status.app/Contents/MacOS/Gaming Network Status";
+			};
+			name = Debug;
+		};
+		B2B0F6AC1A7B3A04006E80ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Gaming Network StatusTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gaming Network Status.app/Contents/MacOS/Gaming Network Status";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2B0F6881A7B3A04006E80ED /* Build configuration list for PBXProject "Gaming Network Status" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2B0F6A51A7B3A04006E80ED /* Debug */,
+				B2B0F6A61A7B3A04006E80ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2B0F6A71A7B3A04006E80ED /* Build configuration list for PBXNativeTarget "Gaming Network Status" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2B0F6A81A7B3A04006E80ED /* Debug */,
+				B2B0F6A91A7B3A04006E80ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B2B0F6AA1A7B3A04006E80ED /* Build configuration list for PBXNativeTarget "Gaming Network StatusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2B0F6AB1A7B3A04006E80ED /* Debug */,
+				B2B0F6AC1A7B3A04006E80ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2B0F6851A7B3A04006E80ED /* Project object */;
+}
