@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6233" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6233"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -11,9 +11,11 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Gaming_Network_Status" customModuleProvider="target">
             <connections>
-                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+                <outlet property="imgvPSNStatus" destination="DNB-0X-SI8" id="eoH-sz-dT0"/>
+                <outlet property="imgvXboxLiveStatus" destination="9af-de-8hh" id="pFe-9o-qlZ"/>
+                <outlet property="menuStatus" destination="igQ-rn-cGr" id="pja-5C-d3r"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -666,15 +668,64 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Gaming Network Status" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
-            <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
-                <autoresizingMask key="autoresizingMask"/>
-            </view>
-        </window>
+        <menu id="igQ-rn-cGr">
+            <items>
+                <menuItem title="Refresh" id="JlX-0e-nAc">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="btnRefreshClicked:" target="Voe-Tx-rLC" id="A3a-bO-pg8"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="BZb-Fr-vPt"/>
+                <menuItem title="Item" id="yjy-Id-FHT">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <outlet property="view" destination="4NO-5B-Q17" id="7dT-gK-kjk"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="MiJ-xA-wnA"/>
+                <menuItem title="Quit" id="3Mc-EU-kbh">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="menuQuit:" target="Voe-Tx-rLC" id="l5D-ay-liF"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="192.5" y="188.5"/>
+        </menu>
+        <customView wantsLayer="YES" id="4NO-5B-Q17">
+            <rect key="frame" x="0.0" y="0.0" width="183" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8h-TC-pkP">
+                    <rect key="frame" x="18" y="60" width="38" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="PSN" id="6z1-k4-anp">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Up-V0-Uey">
+                    <rect key="frame" x="18" y="14" width="73" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="XBOX LIVE" id="rD5-Cx-ejl">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNB-0X-SI8">
+                    <rect key="frame" x="135" y="44" width="48" height="48"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="imgsetGreyIcon" id="bId-Ue-s31"/>
+                </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9af-de-8hh">
+                    <rect key="frame" x="135" y="-2" width="48" height="48"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="imgsetGreyIcon" id="NU8-Ly-96X"/>
+                </imageView>
+            </subviews>
+            <point key="canvasLocation" x="243.5" y="316"/>
+        </customView>
     </objects>
+    <resources>
+        <image name="imgsetGreyIcon" width="16" height="16"/>
+    </resources>
 </document>
