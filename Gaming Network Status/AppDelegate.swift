@@ -12,35 +12,47 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate
 {
     
-    //Variables
+    //Outlets
     @IBOutlet weak var menuStatus: NSMenu!
     @IBOutlet weak var imgvPSNStatus: NSImageView!
     @IBOutlet weak var imgvXboxLiveStatus: NSImageView!
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
+    @IBOutlet weak var imgvXboxLiveGamingStatus: NSImageView!
     
-    //Setup status bar icon
+    //Globals
+    struct myVars
+    {
+        static var psnDown = false
+        static var xboxLiveCoreDown = false
+        static var xboxLiveGamingDown = false
+    }
+    
+    //Setup status bar icon and initial check
+    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
     func applicationDidFinishLaunching(aNotification: NSNotification)
     {
-        
         let icon = NSImage(named: "imgsetStatusIcon")
         icon?.setTemplate(true)
         statusItem.image = icon
         statusItem.menu = menuStatus
         
+        checkNetworkStatus()
+        sleep(3)
+        setStatusLights()
     }
     
-    
-    @IBAction func menuQuit(sender: NSMenuItem) {
-        
+    //Quit Menu
+    @IBAction func menuQuit(sender: NSMenuItem)
+    {
         NSApplication.sharedApplication().terminate(nil)
     }
     
-    //Refresh button clicked
-    @IBAction func btnRefreshClicked(sender: NSMenuItem)
+    //Function that checks for network status
+    func checkNetworkStatus ()
     {
+        //Dictionary - URL/REGEX
+        let gamingNetworkData = ["https://support.us.playstation.com/app/answers/detail/a_id/237/~/psn-status%3A-online" : "PSN Status: Online" , "http://support.xbox.com/en-US/xbox-live-status" : "Xbox Live Core Services.*?up and running", "https://support.xbox.com/en-US/xbox-live-status" : "Social and Gaming.*?up and running"]
         
-        let gamingNetworkData = ["https://support.us.playstation.com/app/answers/detail/a_id/237/~/psn-status%3A-online" : "PSN Status: Online" , "http://support.xbox.com/en-US/xbox-live-status" : "Xbox Live Core Services.*?up and running"]
-        
+        //Iterate over dictionary data
         for (url, regex) in gamingNetworkData
         {
             let url = NSURL(string: url)
@@ -48,9 +60,11 @@ class AppDelegate: NSObject, NSApplicationDelegate
             var queue: NSOperationQueue = NSOperationQueue()
             
             //Grab website
-            
             NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{(response:NSURLResponse!, responseData:NSData!, error: NSError!) -> Void in
                 
+                sleep(2)
+                
+                //Error if website is not available
                 if error != nil
                 {
                     println(error.description)
@@ -61,43 +75,108 @@ class AppDelegate: NSObject, NSApplicationDelegate
                     var responseStr:NSString = NSString(data:responseData, encoding:NSUTF8StringEncoding)!
                     let myStringToBeMatched = responseStr as String
                     
-                    //Check network status
-                    
+                    //Check network status using regex
                     if let match = myStringToBeMatched.rangeOfString(regex, options: .RegularExpressionSearch)
                     {
-                        
-                        println("Network is online!")
-                        
                         if regex == "PSN Status: Online"
                         {
-                            self.imgvPSNStatus.image = NSImage(named: "imgsetGreenIcon")
+                            myVars.psnDown = false
+                            //println("PSN is online!")
                         }
-                        else
+                        
+                        if regex == "Xbox Live Core Services.*?up and running"
                         {
-                            self.imgvXboxLiveStatus.image = NSImage(named: "imgsetGreenIcon")
+                            myVars.xboxLiveCoreDown = false
+                            //println("Xbox Live Core Services is online!")
+                        }
+                        
+                        if regex == "Social and Gaming.*?up and running"
+                        {
+                            myVars.xboxLiveGamingDown = false
+                            //println("Xbox Live Social and Gaming is online!")
                         }
                     }
                     else
                     {
-                        println("Network is down!")
-                        
                         if regex == "PSN Status: Online"
                         {
-                            self.imgvPSNStatus.image = NSImage(named: "imgsetRedIcon")
+                            myVars.psnDown = true
+                            //println("PSN is offline!")
                         }
-                        else
+                        
+                        if regex == "Xbox Live Core Services.*?up and running"
                         {
-                            self.imgvXboxLiveStatus.image = NSImage(named: "imgsetRedIcon")
+                            myVars.xboxLiveCoreDown = true
+                            //println("Xbox Live Core Services is offline!")
+                        }
+                        
+                        if regex == "Social and Gaming.*?up and running"
+                        {
+                            myVars.xboxLiveGamingDown = true
+                            //println("Xbox Live Social and Gaming is offline!")
                         }
                     }
                     
                 }
             })
-            
         }
-
-            
     }
+    
+    //Function that sets green/red/grey status icon for each network
+    func setStatusLights()
+    {
+        //Set PSN status light
+        if myVars.psnDown == false
+        {
+            self.imgvPSNStatus.image = NSImage(named: "imgsetGreenIcon")
+        }
+        else if myVars.psnDown == true
+        {
+            self.imgvPSNStatus.image = NSImage(named: "imgsetRedIcon")
+        }
+        else
+        {
+            self.imgvPSNStatus.image = NSImage(named: "imgsetGreyIcon")
+        }
+        
+        //Set Xbox Live Core status Light
+        if myVars.xboxLiveCoreDown == false
+        {
+            self.imgvXboxLiveStatus.image = NSImage(named: "imgsetGreenIcon")
+        }
+        else if myVars.xboxLiveCoreDown == true
+        {
+            self.imgvXboxLiveStatus.image = NSImage(named: "imgsetRedIcon")
+        }
+        else
+        {
+            self.imgvXboxLiveStatus.image = NSImage(named: "imgsetGreyIcon")
+        }
+        
+        //Set Xbox Live Social/Gaming status Light
+        if myVars.xboxLiveGamingDown == false
+        {
+            self.imgvXboxLiveGamingStatus.image = NSImage(named: "imgsetGreenIcon")
+        }
+        else if myVars.xboxLiveGamingDown == true
+        {
+            self.imgvXboxLiveGamingStatus.image = NSImage(named: "imgsetRedIcon")
+        }
+        else
+        {
+            self.imgvXboxLiveGamingStatus.image = NSImage(named: "imgsetGreyIcon")
+        }
+        
+    }
+    
+    //Refresh button clicked
+    @IBAction func btnRefreshClicked(sender: NSMenuItem)
+    {
+        checkNetworkStatus()
+        sleep(3)
+        setStatusLights()
+    }
+    
 }
 
 
